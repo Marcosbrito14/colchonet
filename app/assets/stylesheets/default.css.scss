@@ -1,3 +1,4 @@
+//Declaração de variaveis em scss de forma algumas configurações globais
 $header-height: 55px;
 $content-width: 700px;
 
@@ -7,6 +8,7 @@ $sans-serif-families: "Helvetica", sans-serif;
 $error-text-color: #B94A48;
 $success-text-color: #468847;
 
+//Estilo geral da pagina cor do fundo, tamanho e familia da fonte do texto.
 * {
   font-family: $sans-serif-families;
   font-size: 14px;
@@ -20,6 +22,8 @@ body { background-color: #f5f5f5; }
   box-shadow:         $color $x $y $radius;
 }
 
+//Criação da barra de navegação do topo
+//#header-wrap responsavel pelo alinhamento do conteudo da barra de navegação
 header {
   @include shadow(#ccc, 0, 3px, 6px);
 
@@ -47,6 +51,7 @@ header {
   }
 }
 
+//Segunda parte da barra superior, estilo do menu de navegação
 header nav {
   float: right;
 
@@ -75,6 +80,7 @@ header nav {
   }
 }
 
+//Conteudo da pagina dentro da div com id content
 #content {
   text-align: left;
   width: $content-width;
@@ -96,6 +102,7 @@ header nav {
   }
 }
 
+//CSS p/ formularios
 form {
   label {
     display: block;
@@ -123,6 +130,7 @@ form {
   }
 }
 
+//Classes relacionadas com informações de erros e flash.
 .field_with_errors {
   display: inline;
 
