@@ -62,12 +62,12 @@ class RoomsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use retornos de chamada para compartilhar configurações ou restrições comuns entre as ações.
     def set_room
       @room = Room.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # Permitir apenas uma lista de parâmetros confiáveis.
     def room_params
       params.require(:room).permit(:title, :location, :description)
     end

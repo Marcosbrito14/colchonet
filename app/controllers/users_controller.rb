@@ -13,12 +13,22 @@ class UsersController < ApplicationController
       redirect_to @user,
                   notice: 'Cadastro criado com sucesso!'
     else
-      render action: :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   def edit
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to @user,
+      notice: 'Cadastro atualizado com sucesso!'
+    else
+      render :e, status: :unprocessable_entity
+    end
   end
 
   private

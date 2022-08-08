@@ -6,6 +6,12 @@ ruby "3.0.3"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
+#Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
+#Precompilation of javascript files
+gem 'therubyracer', platforms: :ruby
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
