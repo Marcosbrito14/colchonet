@@ -10,7 +10,8 @@ gem "rails", "~> 7.0.3"
 gem 'bcrypt', '~> 3.1.7'
 
 #Precompilation of javascript files
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
+gem 'sass-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
