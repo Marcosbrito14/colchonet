@@ -1,14 +1,14 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    Há erros no formulário, por favor verifique.
+    <%= t('.message') %>
   </div>
 <% end %>
 
 <%= form_for @user do |f| %>
 <p>
-  <%= f.label :full_name %><br />
-  <%= f.text_field :full_name %>
-  <%= error_tag @user, :full_name %>
+  <%= f.label(:full_name) %><br />
+  <%= f.text_field(:full_name) %>
+  <%= error_tag(@user, :full_name) %>
 </p>
 
 <p>

@@ -1,4 +1,49 @@
 pt-BR:
+  home:
+    index:
+      message: Quartos recem postados
+
+  users:
+    form:
+      message: Há erros no formulário, por favor verifique.
+    new:
+      title: Cadastro
+    edit:
+      title: Editar Perfil
+    show:
+      title: "Perfil: %{user_name}"
+      edit: 'Editar perfil'
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+
+  links:
+    edit_profile: 'Editar Perfil'
+    home: 'Home'
+    back_profile: "Voltar ao perfil"
+    back: Voltar
+
+  rooms:
+    form:
+      message: Há erros no formulário, por favor verifique.
+    room:
+      title: "Titulo: "
+      location: "Localização: "
+      description: "Descrição: "
+    index:
+      title: Quartos
+    new:
+      title: "Nova Reserva:"
+    edit:
+      title: "Editar Quarto:"
+
+  links:
+    back_to_rooms: "Voltar para os quartos"
+    show_room: "Mostrar quarto"
+    new_room: "Novo Quarto"
+    home: "Home"
+    edit_room: Editar Quarto
+    delete: "Deletar Quarto"
+
   activerecord:
     models:
       room: Quarto

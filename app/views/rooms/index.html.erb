@@ -1,15 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Rooms</h1>
+<h1><%= t('.title') %></h1>
 
 <div id="rooms">
   <% @rooms.each do |room| %>
     <%= render room %>
     <p>
-      <%= link_to "Show this room", room %>
+      <%= link_to t('links.show_room'), room %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New room", new_room_path %><br>
-<%= link_to "Home", root_path %>
+<%= link_to t('links.new_room'), new_room_path %><br>
+<%= link_to t('links.home'), root_path %>

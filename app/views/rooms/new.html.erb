@@ -1,9 +1,9 @@
-<h1>New room</h1>
+<h1><%= t('.title') %></h1>
 
 <%= render "form", room: @room %>
 
 <br>
 
 <div>
-  <%= link_to "Back to rooms", rooms_path %>
+  <%= link_to t('links.back_to_rooms'), rooms_path %>
 </div>

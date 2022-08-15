@@ -3,8 +3,8 @@
 <%= render @room %>
 
 <div>
-  <%= link_to "Edit this room", edit_room_path(@room) %> |
-  <%= link_to "Back to rooms", rooms_path %>
+  <%= link_to t('links.edit_room'), edit_room_path(@room) %> |
+  <%= link_to t('links.back_to_rooms'), rooms_path %>
 
-  <%= button_to "Destroy this room", @room, method: :delete %>
+  <%= button_to t('links.delete'), @room, method: :delete %>
 </div>
