@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Colchonet</title>
+    <title><%= t('layout.title') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
@@ -14,11 +14,11 @@
   <body>
     <header>
       <div id="header-wrap">
-        <h1><%= link_to "colchonet.net", root_path %></h1>
+        <h1><%= link_to t('layout.colchonet_net'), root_path %></h1>
         <nav>
           <ul>
-            <li><%= link_to "Quartos", rooms_path %></li>
-            <li><%= link_to "Cadastro", new_user_path %></li>
+            <li><%= link_to t('layout.rooms'), rooms_path %></li>
+            <li><%= link_to t('layout.signup'), new_user_path %></li>
           </ul>
         </nav>
       </div>

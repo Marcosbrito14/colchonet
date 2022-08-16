@@ -20,7 +20,13 @@ pt-BR:
     edit_profile: 'Editar Perfil'
     home: 'Home'
     back_profile: "Voltar ao perfil"
-    back: Voltar
+    back: 'Voltar'
+
+  layout:
+    title: Colchonet
+    colchonet_net: "colchonet.net"
+    rooms: "Quartos"
+    signup: "Cadastro"
 
   rooms:
     form:
