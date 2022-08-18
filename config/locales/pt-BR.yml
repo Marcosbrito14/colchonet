@@ -16,12 +16,6 @@ pt-BR:
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
 
-  links:
-    edit_profile: 'Editar Perfil'
-    home: 'Home'
-    back_profile: "Voltar ao perfil"
-    back: 'Voltar'
-
   layout:
     title: Colchonet
     colchonet_net: "colchonet.net"
@@ -49,6 +43,9 @@ pt-BR:
     home: "Home"
     edit_room: Editar Quarto
     delete: "Deletar Quarto"
+    edit_profile: 'Editar Perfil'
+    back_profile: "Voltar ao perfil"
+    back: 'Voltar'
 
   activerecord:
     models:
