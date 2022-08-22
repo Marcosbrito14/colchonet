@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :rooms
-  resources :users
+  scope "(:locale)", locale: /en|pt\-BR/ do
+    resources :rooms
+    resources :users
+  end
 
+  get '/:locale' => 'home#index', locale: /en|pt\-BR/
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
