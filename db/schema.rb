@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_01_011551) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_22_173117) do
   create_table "rooms", force: :cascade do |t|
     t.string "title"
     t.string "location"
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_01_011551) do
     t.string "password_digest"
     t.string "invoke"
     t.string "active_record"
+    t.datetime "confirmed_at"
+    t.string "confirmation_token"
   end
 
 end
