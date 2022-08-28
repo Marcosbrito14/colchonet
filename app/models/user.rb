@@ -7,7 +7,20 @@ class User < ApplicationRecord
 
   has_secure_password
 
+#calback p/ gerar o token
   before_create do |user|
-    user.confirmation_token = SecureRandom.urlsafe_base64
-  end 
+    user.confirmation_token = SecureRandom.urlsafe_base64 #numeros aleatorios
+  end
+
+  def confirm!
+    return if confirmed?
+
+    self.confirmed_at = Time.current
+    self.confirmation_token = ''
+    save!
+  end
+
+  def confirmed?
+    confirmed_at.present?
+  end
 end
