@@ -29,6 +29,8 @@ class RoomsController < ApplicationController
 
     respond_to do |format|
       if @room.save
+        NewRoom.confirm_room(@room, User.find_by(full_name: 'marcos@gmail.com')).deliver
+        
         format.html { redirect_to room_url(@room), notice: "Room was successfully created." }
         format.json { render :show, status: :created, location: @room }
       else

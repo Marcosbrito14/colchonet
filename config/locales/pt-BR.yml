@@ -2,6 +2,10 @@ pt-BR:
   confirmations:
     success: Email confirmado com sucesso, obrigado!
 
+  flash:
+    notice:
+      signed_in: Login efetuado com sucesso!
+
   home:
     index:
       message: Quartos recem postados

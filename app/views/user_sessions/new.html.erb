@@ -2,7 +2,7 @@
 
 <% if @user_session.errors.has_key? :base %>
   <div id="error_explanation">
-    <%= @user_session.errors[:base].join(',') %>
+    <%= @user_session.errors[:base].join(', ') %>
   </div>
 <% end %>
 
