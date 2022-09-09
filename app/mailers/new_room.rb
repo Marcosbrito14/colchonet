@@ -4,8 +4,7 @@ class NewRoom < ActionMailer::Base
   def confirm_room(room, user)
     @room = room
     @user = user
-    #byebug
-    #@url = room_url(room)
+    @url = room_url(:"pt-BR", room.id)
 
     mail({
       to: user.email,

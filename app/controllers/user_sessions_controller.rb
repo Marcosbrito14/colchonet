@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
 
       redirect_to root_path, notice: I18n.t('flash.notice.signed_in')
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       Signup.confirm_email(@user).deliver
-      
+
       redirect_to @user,
                   notice: 'Cadastro criado com sucesso!'
     else
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       redirect_to @user,
       notice: 'Cadastro atualizado com sucesso!'
     else
-      render :e, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
