@@ -4,9 +4,9 @@ class UserSessionsController < ApplicationController
   end
 
   def create
-    @user_session = UserSession.new(session, params[:user_session])
+    @user_session = UserSession.new(session, params[:user_session])#Nova instancia da classe Session
 
-    if @user_session.authenticate!
+    if @user_session.authenticate!#metodo sendo chamado p/ gravar na Sessão caso as credenciais estejam corretas
 
       redirect_to root_path, notice: I18n.t('flash.notice.signed_in')
     else
