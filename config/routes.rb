@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users
 
     resource :confirmation, only: [:show]
+#2 passo - rotas dos recursos, ações create, new e destroy
     resource :user_sessions, only: [:create, :new, :destroy]
 
     root "home#index"

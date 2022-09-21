@@ -1,3 +1,4 @@
+<!--4 passo - template com variaveis de intância @user -->
 <h1><%= t('.title') %></h1>
 
 <% if @user_session.errors.has_key? :base %>
@@ -6,6 +7,7 @@
   </div>
 <% end %>
 
+<!-- formulario com os atributos da classe session -->
 <%= form_for @user_session do |f| %>
 <p>
   <%= f.label :email %>

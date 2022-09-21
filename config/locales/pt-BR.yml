@@ -42,7 +42,8 @@ pt-BR:
       title: "Nova Reserva:"
     edit:
       title: "Editar Quarto:"
-
+#5 passo adicionar os atributos do template no i18n
+#titulo e botão
   user_sessions:
     new:
       title: 'Login'
@@ -90,7 +91,7 @@ pt-BR:
         description: Descrição
         location: Localização
         title: Título
-
+#5-atributos email e password
   activemodel:
     attributes:
       user_session:
