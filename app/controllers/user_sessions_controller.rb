@@ -1,4 +1,6 @@
 class UserSessionsController < ApplicationController
+  before_action :require_no_authentication, only: [:new, :create]
+  before_action :require_authentication, only: :destroy
 #3 passo - criação do controller UserSessions p/ o formulario de login
 #variaveis de instancia pra usarmos nos template
   def new
@@ -19,6 +21,7 @@ class UserSessionsController < ApplicationController
   end
 
   def destroy
-
+    user_session.destroy
+    redirect_to root_path, notice: t('flash.notice.signed_out')
   end
 end

@@ -4,10 +4,12 @@
 
 <div id="rooms">
   <% @rooms.each do |room| %>
+  <div style= 'margin-bottom: 40px'>
     <%= render room %>
     <p>
       <%= link_to t('links.show_room'), room %>
     </p>
+  </div>
   <% end %>
 </div>
 

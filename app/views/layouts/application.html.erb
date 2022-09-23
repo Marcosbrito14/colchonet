@@ -15,12 +15,12 @@
     <header>
       <div id="header-wrap">
         <h1><%= link_to t('layout.colchonet_net'), root_path %></h1>
-        <nav>
-          <ul>
-            <li><%= link_to t('layout.rooms'), rooms_path %></li>
-            <li><%= link_to t('layout.signup'), new_user_path %></li>
-          </ul>
-        </nav>
+<!--Lógica p/ verificar se usuario tem autenticação e fazer a renderização p/ partial correta -->
+        <% if user_signed_in? %>
+          <%= render 'layouts/user_navbar' %>
+        <% else %>
+          <%= render 'layouts/visitor_navbar' %>
+        <% end %>
       </div>
     </header>
 

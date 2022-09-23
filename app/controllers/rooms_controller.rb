@@ -1,9 +1,9 @@
 class RoomsController < ApplicationController
-                          #apenas
-  before_action :set_room, only: %i[ show edit update destroy ]
+                          #apenas/só
+  before_action :set_room, only: [ :show, :edit, :update, :destroy ]
+  before_action :require_authentication,
+    only: [:new, :edit, :create, :update, :destroy]
 
-  # GET /rooms or /rooms.json
-  #lista todos os rooms
   def index
     @rooms = Room.all
   end
@@ -29,10 +29,10 @@ class RoomsController < ApplicationController
 
     respond_to do |format|
       if @room.save
-        NewRoom.confirm_room(@room, User.find_by(email: 'marcos@gmail.com')).deliver
+        NewRoom.confirm_room(@room, User.find_by(email: 'lucas@gmail.com')).deliver
 
-        format.html { redirect_to room_url(@room), notice: "Room was successfully created." }
-        format.json { render :show, status: :created, location: @room }
+        format.html { redirect_to room_url(@room), notice: t('flash.notice.room_created') }
+        #format.json { render :show, status: :created, location: @room }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @room.errors, status: :unprocessable_entity }
@@ -44,8 +44,8 @@ class RoomsController < ApplicationController
   def update
     respond_to do |format|
       if @room.update(room_params)
-        format.html { redirect_to room_url(@room), notice: "Room was successfully updated." }
-        format.json { render :show, status: :ok, location: @room }
+        format.html { redirect_to room_url(@room), notice: t('flash.notice.room_updated') }
+        #format.json { render :show, status: :ok, location: @room }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @room.errors, status: :unprocessable_entity }
