@@ -31,32 +31,16 @@ class UserSession
   end
 
 #retorna o objeto da clase User que esta na sessão atual
-  def current_user
+  def current_user#usuario atual
     User.find(@session[:user_id])
   end
 
-#verifica se o usuario possui uma sessão autenticada
-  def user_signed_in?
+#verifica se o usuario possui uma sessão autentica
+  def user_signed_in?#usuario conectado?
     @session[:user_id].present?
   end
 
   def destroy
     @session[:user_id] = nil
   end
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-def teteste
-  false
 end

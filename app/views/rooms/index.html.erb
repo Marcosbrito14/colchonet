@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+  <%= current_user.full_name %>
+<% end %>
 <p style="color: green"><%= notice %></p>
 
 <h1><%= t('.title') %></h1>
